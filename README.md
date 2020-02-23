@@ -16,11 +16,11 @@ Start at the [server](server/README.md) and then go to the [client](client/READM
 
 *(fill-in line above with group identifier e.g. A07 or T22; and then delete this line)*
 
-... [...](mailto:...@dtecnico.ulisboa.pt)
+... [...](mailto:...@tecnico.ulisboa.pt)
 
-... [...](mailto:...@dtecnico.ulisboa.pt)
+... [...](mailto:...@tecnico.ulisboa.pt)
 
-... [...](mailto:...@dtecnico.ulisboa.pt)
+... [...](mailto:...@tecnico.ulisboa.pt)
 
 *(fill-in lines above with student number, name, and email; and then delete this line)*
 
