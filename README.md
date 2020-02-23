@@ -1,39 +1,12 @@
-# ... exercise
+# Java Sockets exercise
 
-This is the starting point for exercise on ...
+This is the starting point for exercise on Java Sockets.
+It is composed of two modules:
+- [server](server/) - program that opens a socket and awaits for requests to process
+- [client](client/) - program that opens a connection to the server and sends a request
 
-
-## Maven instructions
-
-To print the project dependencies:
-
-```
-mvn dependency:tree
-```
-
-To compile the source code:
-
-```
-mvn compile
-```
-
-To execute the program:
-
-```
-...
-```
-
-*(complete the instructions above; and then delete this line)*
-
-
-## To configure the Maven project in Eclipse
-
-'File', 'Import...', 'Maven'-'Existing Maven Projects'
-
-'Select root directory' and 'Browse' to the project base folder.
-
-Check that the desired POM is selected and 'Finish'.
-
+See the README for each module.
+Start at the [server](server/README.md) and then go to the [client](client/README.md).
 
 ----
 
@@ -50,7 +23,6 @@ Check that the desired POM is selected and 'Finish'.
 ... [...](mailto:...@dtecnico.ulisboa.pt)
 
 *(fill-in lines above with student number, name, and email; and then delete this line)*
-
 
 ----
 
