@@ -1,6 +1,6 @@
 # Socket Client example
 
-This example demonstrates the use of sockets in the Java platform.
+This example demonstrates the use of sockets in the Java platform.  
 The client connects to the server, sends a line of text, and terminates.
 The host and port to connect to are defined as arguments.
 The text to send is also defined as argument to the program.

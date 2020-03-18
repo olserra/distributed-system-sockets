@@ -1,6 +1,6 @@
 # Socket Server example
 
-This example demonstrates the use of sockets in the Java platform.
+This example demonstrates the use of sockets in the Java platform.  
 The server opens a TCP socket and blocks waiting for connections.
 The port number is defined by an argument to the program.
 
@@ -20,7 +20,6 @@ mvn exec:java
 
 
 ## To configure the Maven project in Eclipse:
-
 
 'File', 'Import...', 'Maven'-'Existing Maven Projects'
 

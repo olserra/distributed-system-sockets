@@ -10,6 +10,7 @@ Start at the [server](server/README.md) and then go to the [client](client/READM
 
 ----
 
+
 ## Authors
 
 **Group ...**
@@ -23,6 +24,7 @@ Start at the [server](server/README.md) and then go to the [client](client/READM
 ... [...](mailto:...@tecnico.ulisboa.pt)
 
 *(fill-in lines above with student number, name, and email; and then delete this line)*
+
 
 ----
 
