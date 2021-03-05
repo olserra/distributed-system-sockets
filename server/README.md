@@ -9,11 +9,13 @@ The port number is defined by an argument to the program.
 
 
 To compile:
+
 ```
 mvn compile
 ```
 
 To run using _exec_ plugin:
+
 ```
 mvn exec:java
 ```

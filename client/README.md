@@ -9,11 +9,13 @@ The text to send is also defined as argument to the program.
 ## Instructions using Maven:
 
 To compile:
+
 ```
 mvn compile
 ```
 
 To run using _exec_ plugin:
+
 ```
 mvn exec:java
 ```
