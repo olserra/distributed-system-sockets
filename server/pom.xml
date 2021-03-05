@@ -31,6 +31,7 @@
 		<!-- Plug-ins allow for the reuse of common build logic across multiple projects. 
 		They do this by executing an "action" in the context of a project's description. -->
 		<plugins>
+			<!-- The Exec plug-in allows us to execute system and Java programs. -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
