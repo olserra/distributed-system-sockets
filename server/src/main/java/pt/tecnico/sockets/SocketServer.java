@@ -2,10 +2,9 @@ package pt.tecnico.sockets;
 
 import java.io.*;
 import java.net.*;
+import java.io.DataOutputStream;
 
 public class SocketServer {
-
-	private static ServerSocket serverSocket;
 
 	public static void main(String[] args) throws IOException {
 		// Check arguments
@@ -18,14 +17,9 @@ public class SocketServer {
 		// Convert port from String to int
 		final int port = Integer.parseInt(args[0]);
 
-		try {
-			// Create server socket
-			serverSocket = new ServerSocket(port);
-			System.out.printf("Server accepting connections on port %d %n", port);
-		} catch (IllegalArgumentException e) {
-			System.err.println("Caught exception when doing something: " + e);
-			throw e;
-		}
+		// Create server socket
+		ServerSocket serverSocket = new ServerSocket(port);
+		System.out.printf("Server accepting connections on port %d %n", port);
 
 		// wait for and then accept client connection
 		// a socket is created to handle the created connection
@@ -34,8 +28,14 @@ public class SocketServer {
 		final int clientPort = clientSocket.getPort();
 		System.out.printf("Connected to client %s on port %d %n", clientAddress, clientPort);
 
+
+
 		// Create buffered stream to receive data from client, one line at a time
 		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+
+		// Create stream to send data to client
+		DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
 
 		// Receive data until client closes the connection
 		String response;
@@ -46,7 +46,20 @@ public class SocketServer {
 			if (response == null) {
 				break;
 			}
+
+			String[] part = response.split(" ", 2);
+			final int number = Integer.parseInt(part[0]);
+
 			System.out.printf("Received message with content: '%s'%n", response);
+			//out.writeBytes("SAY OK\n");
+			//System.out.println("ENVIADO");
+
+			if(number < 10) {
+				out.writeBytes("0\n");
+			}
+			else {
+				out.writeBytes("1\n");
+			}
 		}
 
 		// Close connection to current client

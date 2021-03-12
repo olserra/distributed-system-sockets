@@ -46,7 +46,7 @@
 				<configuration>
 					<mainClass>${mainclass}</mainClass>
 					<arguments>
-						<argument>65536</argument><!-- intentional error to cause exception trace -->
+						<argument>8000</argument>
 					</arguments>
 				</configuration>
 			</plugin>

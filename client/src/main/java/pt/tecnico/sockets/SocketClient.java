@@ -1,6 +1,8 @@
 package pt.tecnico.sockets;
 
 import java.io.DataOutputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -28,7 +30,12 @@ public class SocketClient {
 				sb.append(" ");
 			}
 		}
+
 		final String text = sb.toString();
+
+		int number = text.length();
+		String numberString = String.valueOf(number);
+
 
 		// Create client socket
 		Socket socket = new Socket(host, port);
@@ -38,13 +45,19 @@ public class SocketClient {
 		DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
 		// Send text to server as bytes
+		out.writeBytes(numberString);
+		out.writeBytes(" ");
 		out.writeBytes(text);
 		out.writeBytes("\n");
 		System.out.println("Sent text: " + text);
+
+		BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		String response = input.readLine();
+
+		System.out.printf("Received message with content: '%s'%n", response);
 
 		// Close client socket
 		socket.close();
 		System.out.println("Connection closed");
 	}
-
 }

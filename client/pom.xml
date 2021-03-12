@@ -46,10 +46,10 @@
 					<arguments>
 						<argument>localhost</argument>
 						<argument>8000</argument>
-						<argument>test</argument>
-						<argument>1</argument>
-						<argument>2</argument>
-						<argument>3</argument>
+						<argument>Eu</argument>
+						<argument>sou</argument>
+						<argument>o</argument>
+						<argument>cliente</argument>
 					</arguments>
 				</configuration>
 			</plugin>
