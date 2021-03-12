@@ -5,6 +5,8 @@ import java.net.*;
 
 public class SocketServer {
 
+	private static ServerSocket serverSocket;
+
 	public static void main(String[] args) throws IOException {
 		// Check arguments
 		if (args.length < 1) {
@@ -16,9 +18,14 @@ public class SocketServer {
 		// Convert port from String to int
 		final int port = Integer.parseInt(args[0]);
 
-		// Create server socket
-		ServerSocket serverSocket = new ServerSocket(port);
-		System.out.printf("Server accepting connections on port %d %n", port);
+		try {
+			// Create server socket
+			serverSocket = new ServerSocket(port);
+			System.out.printf("Server accepting connections on port %d %n", port);
+		} catch (IllegalArgumentException e) {
+			System.err.println("Caught exception when doing something: " + e);
+			throw e;
+		}
 
 		// wait for and then accept client connection
 		// a socket is created to handle the created connection
